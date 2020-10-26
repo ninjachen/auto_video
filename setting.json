@@ -1,16 +1,30 @@
 {
-    "API_KEY": "6gI2piIaG0DzRMTgDE6XN4S6",
-    "APP_ID": "20355681",
-    "SECRET_KEY": "yARGOWrKDHDSDIkkD1ngFNKvjvhvBWdX",
+    "API_KEY": "y187VV0mVrc2WKAGvHVTrrX2",
+    "APP_ID": "21796019",
+    "SECRET_KEY": "PMrdIOZ8YpOMxm5hj3MjXnYr6IcZ3PCM",
     "character": {
-        "kp": {
+        "KP": {
             "sound": {
-                "spd": 6,
+                "spd": 1,
                 "per": 1,
                 "pid": 4
             }
         },
-        "sma": {
+        "\u76ae\u5c14\u65af": {
+            "sound": {
+                "spd": 7,
+                "per": 4,
+                "pid": 8
+            }
+        },
+        "\u54c8\u7f57\u5fb7": {
+            "sound": {
+                "spd": 7,
+                "per": 4,
+                "pid": 8
+            }
+        },
+        "\u8d1d\u5c14\u7279\u5357": {
             "sound": {
                 "spd": 7,
                 "per": 4,

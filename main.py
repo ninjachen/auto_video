@@ -62,6 +62,7 @@ def load_log(path):
             return num, text, bg_list
         except:
             print("剧本格式错误")
+            raise
     except:
         print('读取剧本失败')
 
@@ -188,15 +189,12 @@ def set_cell_value(event):
 def create_frame(num, player_name, text, bg):
     # 立绘
     try:
-        try:
-            character = Image.open("image/" + player_name + ".png")
-            player_name = player_name.split("(")[0]
-            player_name = player_name.split("（")[0]
-        except:
-            player_name = player_name.split("(")[0]
-            player_name = player_name.split("（")[0]
-            character = Image.open("image/" + player_name + ".png")
+        img_path="img/" + player_name + ".png";
+        player_name = player_name.split("(")[0]
+        player_name = player_name.split("（")[0]
+        player = Image.open(img_path)
     except:
+        print("加载立绘失败." + img_path + ", 加载默认立绘.")
         if (player_name == "kp"):
             player = Image.open("img/default/kp.png")
         else:
@@ -227,7 +225,8 @@ def create_frame(num, player_name, text, bg):
     dialog_frame = dialog_frame.resize((bgx, int(0.75 * bgy)), Image.BILINEAR)  # 固定对话框Y坐标起始于画面3/4处
     dialog_frame_x, dialog_frame_y = dialog_frame.size
     font_size = int(bgy / 20)
-    _font = ImageFont.truetype('simhei.ttf', font_size)
+    _font=ImageFont.truetype('Songti.ttc',int(bgy/20))
+        # _font = ImageFont.truetype('simhei.ttf', font_size)
 
     text_pos_manual = setting["position"]  # 调取文字上下坐标的输入
     if text_pos_manual == 0:
